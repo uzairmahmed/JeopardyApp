@@ -22,7 +22,7 @@ const QuestionCell: FC<QuestionCellProps> = ({ category, points, question, answe
 
     return (
         <>
-            <button onClick={() => questionState === 'unanswered' && document.getElementById(`${category}-${points}-modal`).showModal()} key={`${category}-${points}`}
+            <button onClick={() => questionState === 'unanswered' && (document.getElementById(`${category}-${points}-modal`) as HTMLDialogElement)?.showModal()} key={`${category}-${points}`}
                 className={`flex justify-center items-center text-center rounded-box p-4 
                     ${questionState !== 'unanswered' ?
                         'bg-neutral hover:bg-neutral text-neutral-content hover:text-neutral-content cursor-not-allowed' :
