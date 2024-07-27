@@ -18,9 +18,9 @@ const AnswerBadge: FC<AnswerBadgeProps> = ({ category, points }) => {
     return (
         <>
             <button
-                key={`${name}-badge`}
                 className="badge badge-sm 2xl:badge-lg badge-primary hover:badge-accent gap-3 align-middle justify-between cursor-pointer select-none"
-                onClick={() => (document.getElementById(`${category}-${points}-modal`) as HTMLDialogElement)?.showModal()}
+                onClick={() => (document.getElementById(`${category}-${points}-delete-modal`) as HTMLDialogElement)?.showModal()}
+                key={`${category}-${points}-badge`}
             >
                 <p>
                     {category} - {points}
