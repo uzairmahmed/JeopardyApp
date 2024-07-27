@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import type { FC } from 'react';
 import QuestionCell from './QuestionCell';
 import useQuestionStore from '@/stores/questionStore';
@@ -20,8 +20,8 @@ const QuestionGrid: FC<QuestionGridProps> = ({ }) => {
                 ))}
             </div>
             <div className={`grid grid-cols-6 gap-4 p-5 h-[90%]`}>
-                {categories.map((category) =>
-                    points.map((points) => {
+                {points.map((points) =>
+                    categories.map((category) => {
                         const questionData = questions[category].find(q => q.points === points);
                         if (questionData) {
                             return (
@@ -41,4 +41,5 @@ const QuestionGrid: FC<QuestionGridProps> = ({ }) => {
         </div>
     );
 }
+
 export default QuestionGrid;
