@@ -49,7 +49,7 @@ const TeamGrid: FC<TeamGridProps> = ({ }) => {
                     <ThemeSwitcher />
 
                     <div className="mask mask-circle w-12">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Breezeicons-actions-22-im-user.svg/512px-Breezeicons-actions-22-im-user.svg.png" />
                     </div>
                 </div>
             </div>
