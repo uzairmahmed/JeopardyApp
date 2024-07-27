@@ -23,29 +23,31 @@ const TeamGrid: FC<TeamGridProps> = ({ }) => {
         return Object.entries(questions).flatMap(([category, questions]) =>
             questions
                 .filter(question => question.status === team)
-                .map(question => ({ category:category, points: question.points }))
+                .map(question => ({ category: category, points: question.points }))
         );
     };
 
     return (
-        <div className='h-full'>
-            <div className={`flex flex-col h-full p-5`}>
-                <div className={`flex flex-col gap-4 w-full h-full`}>
-                    {teams.map((team, index) => (
-                        <div key={team} className='flex flex-col justify-between items-center text-center bg-base-300 text-base-content rounded-box max-h-[50%] p-10 gap-5'>
-                            <div className='flex flex-row justify-between font-bold w-full'>
-                                <p>{team}</p>
-                                <p>{index === 0 ? team1Points : team2Points} Points</p>
+        <>
+            <div className='flex flex-col h-full w-5/6 md:w-full'>
+                <div className={`flex flex-col h-full p-5`}>
+                    <div className={`flex flex-col md:flex-row 2xl:flex-col gap-4 w-full h-full`}>
+                        {teams.map((team, index) => (
+                            <div key={team} className='flex flex-col md:flex-row 2xl:flex-col justify-between items-center text-center bg-base-300 text-base-content rounded-box max-h-[50%] md:max-h-full 2xl:max-h-[50%] p-10 gap-5 w-full'>
+                                <div className='flex flex-row md:flex-col 2xl:flex-row justify-between font-bold w-full md:w-1/3 2xl:w-full text-left'>
+                                    <p>{team}</p>
+                                    <p>{index === 0 ? team1Points : team2Points} Points</p>
+                                </div>
+                                <div className='flex flex-row flex-wrap gap-2 h-full w-full justify-center overflow-y-scroll'>
+                                    {getAnswerBadges(index === 0 ? 'team 1' : 'team 2').map(({ category, points }) => (
+                                        <AnswerBadge key={`${category}-${points}`} category={category} points={points} />
+                                    ))}
+                                </div>
                             </div>
-                            <div className='flex flex-row flex-wrap gap-2 w-full justify-center'>
-                                {getAnswerBadges(index === 0 ? 'team 1' : 'team 2').map(({category, points}) => (
-                                    <AnswerBadge key={`${category}-${points}`} category={category} points={points} />
-                                ))}
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-                <div className='flex flex-row w-full rounded-box bg-base-300 p-2 justify-between '>
+                <div className='flex flex-row w-full rounded-box bg-base-300 p-2 justify-between h-[72px]'>
                     <ThemeSwitcher />
 
                     <div className="mask mask-circle w-12">
@@ -53,7 +55,7 @@ const TeamGrid: FC<TeamGridProps> = ({ }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 export default TeamGrid;

@@ -12,14 +12,14 @@ const QuestionGrid: FC<QuestionGridProps> = ({ }) => {
 
     return (
         <div className='h-full'>
-            <div className={`grid grid-cols-6 gap-4 p-5 h-[10%]`}>
+            <div className={`grid grid-cols-6 gap-1 md:gap-4 p-0 md:p-5 h-[10%]`}>
                 {categories.map((category) => (
-                    <div key={category} className='flex justify-center items-center text-center rounded-box p-4 text-base-content font-bold'>
+                    <div key={category} className='flex justify-center items-center text-center rounded-box p-0 md:p-4 text-base-content font-bold break-all md:break-normal'>
                         {category}
                     </div>
                 ))}
             </div>
-            <div className={`grid grid-cols-6 gap-4 p-5 h-[90%]`}>
+            <div className={`grid grid-cols-6 gap-1 md:gap-4 p-0 md:p-5 h-[90%]`}>
                 {points.map((points) =>
                     categories.map((category) => {
                         const questionData = questions[category].find(q => q.points === points);
