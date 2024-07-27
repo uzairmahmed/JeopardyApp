@@ -52,7 +52,7 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ }) => {
             </div>
             <ul tabIndex={0} className="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
                 {themes.map((theme) => (
-                    <li><input
+                    <li id='theme-option'><input
                         type="radio"
                         name="theme-dropdown"
                         className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
