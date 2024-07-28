@@ -29,11 +29,11 @@ export const initialData = {
         { question: 'What is the largest coral reef system in the world?', answer: 'The Great Barrier Reef', points: 500, status: 'unanswered' as 'unanswered' },
     ],
     'History': [
-        { question: 'What is the oldest human civilization?', answer: 'Mesopotamia', points: 100, status: 'unanswered' as 'unanswered' },
-        { question: 'World War I started because _______ was assassinated.', answer: 'Archduke Franz Ferdinand', points: 200, status: 'unanswered' as 'unanswered' },
+        { question: 'World War I started because _______ was assassinated.', answer: 'Archduke Franz Ferdinand', points: 100, status: 'unanswered' as 'unanswered' },
+        { question: 'Who used to play chess with strangers at Dundas Square?', answer: 'Spiderman', points: 200, status: 'unanswered' as 'unanswered' },
         { question: 'Who was the 3rd Vice President of the United States?', answer: 'Aaron Burr, sir', points: 300, status: 'unanswered' as 'unanswered' },
         { question: 'The Great Wall of China was built during which dynasty?', answer: 'The Ming Dynasty', points: 400, status: 'unanswered' as 'unanswered' },
-        { question: 'BLANK', answer: 'The Ming Dynasty', points: 500, status: 'unanswered' as 'unanswered' },
+        { question: 'What was put in Lake Ontario for Canada\'s 150th anniversary?', answer: 'a Giant Rubber Duck', points: 500, status: 'unanswered' as 'unanswered' },
     ],
     'General Knowledge': [
         { question: 'Who wrote the play “Henry V”?', answer: 'William Shakespeare', points: 100, status: 'unanswered' as 'unanswered' },
