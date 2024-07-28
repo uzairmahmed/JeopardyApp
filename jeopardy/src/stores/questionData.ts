@@ -35,11 +35,11 @@ export const initialData = {
         { question: 'The Great Wall of China was built during which dynasty?', answer: 'The Ming Dynasty', points: 400, status: 'unanswered' as 'unanswered' },
         { question: 'What was put in Lake Ontario for Canada\'s 150th anniversary?', answer: 'a Giant Rubber Duck', points: 500, status: 'unanswered' as 'unanswered' },
     ],
-    'General Knowledge': [
-        { question: 'Who wrote the play “Henry V”?', answer: 'William Shakespeare', points: 100, status: 'unanswered' as 'unanswered' },
-        { question: 'Which element is “Rf”?', answer: 'Rutherfordium', points: 200, status: 'unanswered' as 'unanswered' },
-        { question: 'Who is this?', answer: 'Funky Kong', points: 300, status: 'unanswered' as 'unanswered' },
-        { question: 'What is the only state in the USA that grows coffee commercially?', answer: 'Hawaii', points: 400, status: 'unanswered' as 'unanswered' },
-        { question: 'What is the term for the fear of long words, (Hint: it\'s really long and starts with “hippo”)?', answer: 'Hippopotomonstrosesquipedaliophobia', points: 500, status: 'unanswered' as 'unanswered' },
+    'Momo Knowledge': [
+        { question: 'What is the best card game?', answer: 'Monopoly Deal', points: 100, status: 'unanswered' as 'unanswered' },
+        { question: 'What restaurant do we always end up at?', answer: 'Magical Tase of China', points: 200, status: 'unanswered' as 'unanswered' },
+        { question: 'Who is our newest member?', answer: 'Areeb', points: 300, status: 'unanswered' as 'unanswered' },
+        { question: 'What game causes the most fights?', answer: 'Pico Park', points: 400, status: 'unanswered' as 'unanswered' },
+        { question: 'Who was the in the original group chat?', answer: 'Uzair Taj Aleeza Nazifa Corey Hassan Sana Maeshah Ifra', points: 500, status: 'unanswered' as 'unanswered' },
     ],
 };
