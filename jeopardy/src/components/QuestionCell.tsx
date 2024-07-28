@@ -1,6 +1,6 @@
 'use client'
 
-import type { FC } from 'react';
+import { FC, useState } from 'react';
 import useQuestionStore from '../stores/questionStore';
 
 interface QuestionCellProps {
@@ -11,6 +11,7 @@ interface QuestionCellProps {
 }
 
 const QuestionCell: FC<QuestionCellProps> = ({ category, points, question, answer }) => {
+    const [showAnswer, setShowAnswer] = useState(false);
     const setQuestionState = useQuestionStore((state) => state.setQuestionState);
     const questionState = useQuestionStore((state) =>
         state.categories[category]?.find(q => q.points === points)?.status
@@ -36,9 +37,15 @@ const QuestionCell: FC<QuestionCellProps> = ({ category, points, question, answe
                 <div className="modal-box bg-base-200 text-base-content">
                     <h3 className="text-lg">{`${category} ${points} `}</h3>
                     <p className="py-4">{question}</p>
-                    <p className="py-4">{answer}</p>
-                    <div className='flex flex-col gap-5 w-full align-middle justify-center'>
 
+                    <div onClick={() => setShowAnswer(true)} className='flex flex-col gap-5 w-full align-middle justify-center bg-base-300 hover:bg-warning transition-all text-base-content hover:text-warning-content'>
+                        {
+                            showAnswer ?
+                                <p className="py-4 underline text-center font-bold text-success">{answer}</p>
+                                :
+                                <p className="py-4 underline text-center font-bold">Show Answer</p>
+
+                        }
                     </div>
 
                     <div className="modal-action">
